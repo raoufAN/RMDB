@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- normlaize link-->
+    <link rel="stylesheet" href="css/normalaiz.css" />
+    <!-- font awesome link all min-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- my css link -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Rmdb</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <h3>RMDB</h3>
+        </div>
+
+        <ul class="navbar">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="anime.html" class="active">Anime</a>
+          </li>
+          <li>
+            <a href="movie.html">Movie</a>
+          </li>
+          <li>
+            <a href="show.html">TV Show</a>
+          </li>
+        </ul>
+        <div class="menu" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+    <div class="holder-container">
+      <div class="sidebar">
+        <ul class="list">
+          <h2 onclick="getAllAnime(1),passeDataPagination(1)">
+            <i class="fas fa-star color"></i> Anime
+          </h2>
+          <li
+            class="select"
+            onclick="LatestUpdatedEpisode(1),passeDataPaginationLatest(1)"
+          >
+            <i class="fas fa-sync-alt blue"></i> Latest Updated Episode
+          </li>
+          <li
+            class="select"
+            onclick="TopUpcomingAnime(1),passeDataPaginationTopUpcoming(1)"
+          >
+            <i class="fas fa-calendar-alt green"></i> Top Upcoming Anime
+          </li>
+          <li
+            class="select"
+            onclick="TopAiringAnime(1),passeDataPaginationTopAiring(1)"
+          >
+            <i class="fas fa-chart-line red"></i> Top Airing Anime
+          </li>
+          <li
+            class="select"
+            onclick="populaireAnime(1),passeDataPaginationPoulaire(1)"
+          >
+            <i class="fas fa-fire orange"></i> Most Popular Anime
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <h2 class="title"></h2>
+        <div class="input-box">
+          <label for="anime-search">search </label>
+          <input
+            type="search"
+            placeholder="Type Your Anime"
+            class="input-search"
+            id="anime-search"
+          />
+        </div>
+        <div class="changable">
+          <div class="content-box"></div>
+          <nav class="pagination">
+            <ul></ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <ul class="icon">
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-tiktok"></i></li>
+          <li><i class="fab fa-facebook"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+          <li><i class="fab fa-youtube"></i></li>
+        </ul>
+        <ul class="content">
+          <li><a href="#">Upload Our App</a></li>
+          <li><a href="#">Get In Touch</a></li>
+          <li><a href="#">Get RMDB-Pro</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Term Of Use</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+      <p>© 2024 RMDB.com, Made By Raouf AN</p>
+    </div>
+    <!--   anime js-->
+    <script src="js/anime.js"></script>
+    <!-- navbar-->
+    <script src="js/navbar.js"></script>
+  </body>
+</html>

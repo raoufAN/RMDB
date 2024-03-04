@@ -1,0 +1,99 @@
+.holder {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content-blank {
+  width: 50%;
+}
+
+.content-blank strong {
+  margin-right: 10px;
+}
+
+.content-blank .title-blank {
+  margin: 20px 0;
+  font-size: 27px;
+}
+
+.content-blank .release_date_blank {
+  margin: 20px 0;
+}
+
+.content-blank .popularity_blank {
+  margin: 20px 0;
+}
+
+.content-blank .overview-blank {
+  margin: 20px 0;
+}
+
+.box-image-blank {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster-blank {
+  height: 350px;
+  border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  .holder {
+    flex-direction: column;
+    border: none;
+  }
+
+  .content-blank {
+    width: 100%;
+    order: 2;
+  }
+  .box-image-blank {
+    width: 100%;
+    order: 1;
+  }
+}
+
+/* sereie*/
+.content-blank .title {
+  font-size: 18px;
+}
+.content-blank .title strong {
+  font-size: 27px;
+}
+
+.content-blank li span {
+  font-weight: 600;
+  color: rgb(45, 45, 245);
+  margin-right: 15px;
+}
+
+.content-blank li {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.summary p {
+  display: inline;
+}
+
+.star {
+  color: #ffcd3c;
+}
+
+/* animeBlank */
+
+.summary-anime {
+  text-align: left;
+}
+
+.anime {
+  height: 477px;
+}

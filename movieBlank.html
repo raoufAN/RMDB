@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- normlaize link-->
+    <link rel="stylesheet" href="css/normalaiz.css" />
+    <!-- font awesome link all min-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- my css link -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- main blank css-->
+    <link rel="stylesheet" href="css/main_blank.css" />
+
+    <title>Rmdb</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <h3>RMDB</h3>
+        </div>
+        <ul class="navbar">
+          <li>
+            <a href="index.html" class="active">Home</a>
+          </li>
+          <li>
+            <a href="index.html">Anime</a>
+          </li>
+          <li>
+            <a href="movie.html">Movie</a>
+          </li>
+          <li>
+            <a href="show.html">TV Show</a>
+          </li>
+        </ul>
+        <div class="menu" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+    <div class="container holder"></div>
+    <div class="footer">
+      <div class="container">
+        <ul class="icon">
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-tiktok"></i></li>
+          <li><i class="fab fa-facebook"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+          <li><i class="fab fa-youtube"></i></li>
+        </ul>
+        <ul class="content">
+          <li><a href="#">Upload Our App</a></li>
+          <li><a href="#">Get In Touch</a></li>
+          <li><a href="#">Get RMDB-Pro</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Term Of Use</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+      <p>© 2024 RMDB.com, Made By Raouf AN</p>
+    </div>
+
+    <script>
+      window.onload = function () {
+        const urlPram = new URLSearchParams(window.location.search);
+        const title = urlPram.get("title");
+        const release_date = urlPram.get("release_date");
+        const popularity = urlPram.get("popularity");
+        const overview = urlPram.get("overview");
+        const poster = urlPram.get("poster");
+        let holderContaier = document.querySelector(".holder");
+        //console.log(title, release_date, popularity, overview, poster);
+
+        holderContaier.innerHTML = `
+        
+            <div class="content-blank">
+                 <h3 class="title-blank"><strong>title :</strong>${title}</h3>
+                 <h4 class="release_date_blank">Release Date : ${release_date}</h4>
+                <h4 class="popularity_blank">Popularity : ${popularity}</h4>
+                <p class="overview-blank"><strong>story :</strong>  ${overview}</p>
+            </div>
+            <div class="box-image-blank">
+                <img src="${poster}" alt="" class="poster-blank" />
+            </div>
+
+         
+        `;
+      };
+    </script>
+    <script src="js/navbar.js"></script>
+  </body>
+</html>

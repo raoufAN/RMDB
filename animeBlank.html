@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- normlaize link-->
+    <link rel="stylesheet" href="css/normalaiz.css" />
+    <!-- font awesome link all min-->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- my css link -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- main blank css-->
+    <link rel="stylesheet" href="css/main_blank.css" />
+
+    <title>Rmdb</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <h3>RMDB</h3>
+        </div>
+        <ul class="navbar">
+          <li>
+            <a href="index.html" class="active">Home</a>
+          </li>
+          <li>
+            <a href="index.html">Anime</a>
+          </li>
+          <li>
+            <a href="movie.html">Movie</a>
+          </li>
+          <li>
+            <a href="show.html">TV Show</a>
+          </li>
+        </ul>
+        <div class="menu" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+    <div class="container holder"></div>
+    <div class="footer">
+      <div class="container">
+        <ul class="icon">
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-tiktok"></i></li>
+          <li><i class="fab fa-facebook"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+          <li><i class="fab fa-youtube"></i></li>
+        </ul>
+        <ul class="content">
+          <li><a href="#">Upload Our App</a></li>
+          <li><a href="#">Get In Touch</a></li>
+          <li><a href="#">Get RMDB-Pro</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Term Of Use</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+      <p>© 2024 RMDB.com, Made By Raouf AN</p>
+    </div>
+    <script src="js/navbar.js"></script>
+    <script>
+      window.onload = function () {
+        const urlPram = new URLSearchParams(window.location.search);
+        const title = urlPram.get("title");
+        const release_date = urlPram.get("year");
+        const source = urlPram.get("source");
+        const season = urlPram.get("season");
+        const rating = urlPram.get("rating");
+        const genres = urlPram.get("genres");
+        const episodes = urlPram.get("episodes");
+        const status = urlPram.get("status");
+        const story = urlPram.get("story");
+        const poster = urlPram.get("poster");
+        let holderContaier = document.querySelector(".holder");
+        console.log(
+          title,
+          source,
+          season,
+          genres,
+          rating,
+          status,
+          poster,
+          release_date,
+          episodes,
+          story
+        );
+        title,
+          (holderContaier.innerHTML = `
+        
+            <ul class="content-blank">
+                <li class="title-blank title"><span>Title :</span><strong>${title}</strong></li>
+                <li class="genres"><span>Genre :</span> : ${genres}</span>
+                <li class="release-date"><span>Release-Date :</span> : ${release_date}</span>
+                <li class="rating"><span>Rating :</span> ${rating} <i class="fa-solid fa-star star"></i></li>
+                <li class="country"><span>season :</span> ${season}</li>
+                <li class="episodes"><span>episodes :</span> ${episodes}</li>
+                <li class="status"><span>status :</span> ${status}</li>
+                <li class="status"><span>source :</span> ${source}</li>
+                <li class="summary summary-anime"><span>overview :</span>${story}</li>
+            </ul>
+            <div class="box-image-blank">
+                <img src="${poster}" alt="" class="poster-blank anime" />
+            </div>
+
+         
+        `);
+      };
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
